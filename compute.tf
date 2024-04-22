@@ -16,6 +16,7 @@ resource "google_compute_instance" "cp" {
       // Ephemeral IP
     }
   }
+}
 
 resource "google_compute_instance" "worker" {
   name         = "worker"
@@ -35,4 +36,5 @@ resource "google_compute_instance" "worker" {
       // Ephemeral IP
     }
   }
+}
 
