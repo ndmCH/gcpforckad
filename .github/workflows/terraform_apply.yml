@@ -1,7 +1,7 @@
 name: Deploy Terraform Configuration
 
 on:
-  push:
+  tag:
     branches:
       - main  # Set this to the branch you want to deploy from
 
