@@ -7,5 +7,6 @@ provider "google" {
 variable "gcp_credentials_file" {
   type        = string
   description = "Path to the GCP credentials file"
+  default     = "./gcp-key.json"
 }
 
