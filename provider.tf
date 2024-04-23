@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("var.gcp_credentials_file")
+  credentials = file(var.gcp_credentials_file)
   project     = "ckad-practice-420508"
   region      = "europe-west6"
 }
