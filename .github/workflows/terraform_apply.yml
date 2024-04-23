@@ -1,15 +1,15 @@
 name: Deploy Terraform Configuration
 
 on:
-  tag:
-    branches:
-      - main  # Set this to the branch you want to deploy from
+  push:
+    tags:
+      - '*'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: production  # Define the environment in GitHub settings
-
+    environment: production
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -17,7 +17,7 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
       with:
-        terraform_version: "1.2.0"  # Specify your Terraform version
+        terraform_version: "1.2.0"
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0.2.0
